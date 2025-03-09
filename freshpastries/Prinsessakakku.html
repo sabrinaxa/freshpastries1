@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resepti: Suklaafondant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Importation d'une police élégante */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+
+
+
+    </style>
+</head>
+<body>
+    <header class= "index-header">
+        <h1>Fresh Pastries</h1>
+        <nav class ="index-nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="leivokset.html">Leivokset</a></li>
+                <li><a href="tilaus.html">Tilaus</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+
+     <h1>Prinsessakakku</h1>
+        <p>Perinteinen ja kaunis prinsessakakku herkullisella täytteellä 🍰</p>
+ 
+   <main>
+        <section class="recipe-intro">
+     <img src="prinsessakakku-vaihe-8.jpg" alt="Prinsessakakku">
+            <p>Prinsessakakku on juhlava herkku, jossa yhdistyvät pehmeä kakkupohja, vaniljakastike, vadelmahilloa ja marsipaani. Täydellinen juhlahetkiin!</p>
+        </section>
+        
+        </section>
+
+        <section class="recipe-details">
+            <h2>Ainekset</h2>
+                <h3>Pohja:</h3>
+            <ul>
+                 <li>4 munaa</li>
+                <li>1 ½ dl sokeria</li>
+                <li>2 dl vehnäjauhoja</li>
+                <li>1 tl leivinjauhetta</li>
+            </ul>
+             <h3>Täyte:</h3>
+            <ul>
+               <li>2 dl vaniljakastiketta</li>
+                <li>2 dl vadelmahilloa</li>
+                <li>3 dl vispikermaa</li>
+                <li>200 g marsipaania (vihreä)</li>
+            </ul>
+        </section>
+
+        <section class="recipe-steps">
+            <h2>Valmistusohjeet</h2>
+            <ol>
+             <p><strong>1.</strong> Tee kakkupohja kuten täytekakun pohja.</p>
+            <p><strong>2.</strong> Leikkaa jäähtynyt kakku kolmeen osaan.</p>
+            <p><strong>3.</strong> Levitä pohjalle vadelmahilloa, seuraavaan kerrokseen vaniljakastiketta.</p>
+            <p><strong>4.</strong> Vatkaa kerma ja levitä kakun päälle.</p>
+            <p><strong>5.</strong> Kauli marsipaani ohuesti ja peitä kakku. Koristele tomusokerilla.</p>
+      
+            </ol>
+        </section>
+
+        <section class="recipe-gallery">
+            <h2>Vaiheittaiset kuvat</h2>
+            <div class="gallery">
+                 <img src="prinsessakakku-vaihe-5.jpg" alt="Kakkupohjan valmistus">
+                <img src="prinsessakakku-vaihe-6.jpg" alt="Täytteen valmistaminen">
+                 <img src="prinsessakakku-vaihe-7.jpg" alt="Täytteen valmistaminen">
+                <img src="prinsessakakku.jpg" alt="Valmis Prinsessakakku">
+           
+             
+                
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+       <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><a href="index.html">Fresh Pastries</a></h3>
+                <p>Découvrez une sélection exquise de pâtisseries, parfaites pour toutes les occasions.</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="yhteistiedot.html">Ota yhteyttä</a></h3>
+                <p>Fresh Pastriesa - Helsinginkatu 15 A 00100 Helsinki<br>contact@freshpastries.fi<br>+3584452157</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="palvelut.html">Nos Services</a></h3>
+                <p class="services">Livraison<br>Commandes sur mesure<br>Événements</p>
+            </div>
+            <div style="width:100%">
+                <p class="copyright">&copy; 2025 Fresh Pastries | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+ function toggleMenu() {
+    const nav = document.querySelector('.index-nav');
+    const burger = nav.querySelector('.burger');
+    nav.classList.toggle('active');
+    burger.classList.toggle('open');
+
+}
+    </script>
+</body>
+</html>

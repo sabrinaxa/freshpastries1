@@ -1,0 +1,920 @@
+/* Yleiset tyylit */
+body {
+    font-family: Century;
+    color: #8d6a6a;
+    background-color: #FFFACD;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #fdb1d7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 28px;
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+header h1:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.index-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.index-nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.index-nav  ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #fdb1d7;
+    bottom: -5px;
+    left: 50%;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.index-nav  ul li a:hover {
+    color: #ADD8E6; 
+    transform: scale(1.1);
+}
+
+.index-nav  ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Cible UNIQUEMENT le burger de .index-nav */
+.index-header .burger {
+    display: flex; 
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    display: none;
+   
+}
+
+.index-header .burger div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Animation du menu burger */
+.index-header .burger.open div:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.index-header .burger.open div:nth-child(2) {
+    opacity: 0;
+}
+.index-header .burger.open div:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Affichage du menu */
+.index-nav.active ul {
+    display: block;
+}
+
+/* Pääkuva (hero) */
+.hero {
+    padding: 50px;
+    background-color: #ADD8E6;
+}
+
+.hero img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.links .button {
+    display: inline-block;
+    background-color: #FF69B4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.links .button:hover {
+    background-color: #e89bbf;
+}
+
+.links {
+    padding-top: 50px;
+}
+
+/* Footer en colonnes */
+footer {
+    background-image: url('footer-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    margin: auto;
+    text-align: center;
+    padding: 60px 30px 0px 30px;
+    color: #fff;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding-top: 120px;
+    
+}
+
+.footer-column h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 10px;
+
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+    opacity: 0.8;
+    color: #fff;
+}
+
+/* Responsiivisuus */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        padding-top:10px;
+    }
+
+    .index-header .burger {
+        display: flex;
+        left: 20px; /* Aligné à gauche */
+        margin-top: 10px;
+    }
+
+    .index-nav ul {
+        position: absolute;
+      
+        left: 0;  /* Aligné à gauche */
+        background-color: #FF69B4;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+        border-radius: 5px;
+    }
+
+    .index-nav  ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .index-nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    .index-nav.active ul {
+        display: flex;
+    }
+
+    .hero img {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Centrer le titre dans la version mobile */
+    header h1 {
+        margin: 10px 0;
+    }
+
+
+
+    .tilaus-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tilaukset-aliesittely {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .tilaukset-aliesittely h2 {
+        font-size: 2rem;
+    }
+
+    .tilaukset-aliesittely p {
+        font-size: 1.1rem;
+    }
+
+    .tilaust-main img {
+        max-width: 90%;
+    }
+
+}
+
+/* tilaukset.html */
+.tilaus-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 50px 0px;
+}
+
+
+
+
+
+
+
+.tilaukset-aliesittely {
+
+    padding-right: 20px;
+    justify-content: center;
+
+    display: flex
+;
+}
+
+.tilaukset-aliesittely h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tilaukset-aliesittely p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.tilaus-main img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+   
+}
+
+.tilauksen-container{
+    width: 80%;
+  
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tilaus-main h1 {
+    color: #333;
+    font-family:Century;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.tilaus-main label {
+    font-weight: bold;
+    color: #8b5e3b;
+}
+.tilaus-main input[type="text"], .tilaus-main input[type="email"], .tilaus-main input[type="tel"], .tilaus-main select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.tilaus-main input[type="number"], .tilaus-main input[type="date"], .tilaus-main input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.checkbox-group {
+    margin-top: 10px;
+}
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.tilaus-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+}
+.hinnasto-table {
+    max-width: 600px;
+    border-collapse: collapse;
+    background: #fff;
+    width: 100%;
+
+}
+
+.hinnasto-table th, .hinnasto-table td {
+    padding: 15px;
+    border: 1px solid #fdb1d7;
+    text-align: left;
+}
+
+.hinnasto-table th {
+    background: #FF69B4;
+    color: #fff;
+    font-size: 18px;
+}
+
+.hinnasto-table tr:nth-child(even) {
+    background: #fff5fa;
+}
+
+.hinnasto-table tr:hover {
+    background: #e0e0e0;
+}
+.order-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #FF69B4;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-color: #FF69B4;
+}
+
+.order-button:hover {
+    background: linear-gradient(135deg, #fdb1d7, #FF69B4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.tilaus-main input, .tilaus-main textarea, .tilaus-main select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tilaus-main input[type="checkbox"],
+.tilaus-main input[type="radio"] {
+    width: auto;
+}
+
+
+/* leivokset.html */
+
+.valikoima {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+ 
+}
+
+.valikoima h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+   
+}
+.valikoima h3 {
+
+}
+
+.valikoima ul {
+    list-style-type: none;
+    border: 1px solid #fdb1d7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3sease-in-out;
+    padding: 30px;
+
+}
+
+.valikoima li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.leivokset-footer {
+    margin: auto;
+    background-color: #ADD8E6;
+    padding: 15px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.leivokset-footer a {
+     color: #8d6a6a;
+     text-decoration: none;
+     font-weight:600;
+}
+
+.leivokset-footer a:hover {
+    text-decoration: underline;
+}
+ 
+
+.tilauksen-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+       max-width: 550px;
+    border-collapse: collapse;
+    background: #fff;
+    width: auto;
+        margin-right: 20px;
+}
+
+
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group  label {
+    font-weight: 600;
+   
+}
+
+.tilauksen-container input[type="text"],
+.tilauksen-container input[type="email"],
+.tilauksen-container input[type="tel"],
+.tilauksen-container input[type="number"],
+.tilauksen-container input[type="date"],
+.tilauksen-container input[type="time"],
+.tilauksen-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.tilauksen-container input[type="text"]:focus,
+.tilauksen-container input[type="email"]:focus,
+.tilauksen-container input[type="tel"]:focus,
+.tilauksen-container input[type="number"]:focus,
+.tilauksen-container input[type="date"]:focus,
+.tilauksen-container input[type="time"]:focus,
+.tilauksen-container textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.tilauksen-container .checkbox-group {
+    margin-left: 20px;
+}
+
+.tilauksen-container .checkbox-group input {
+    margin-right: 5px;
+}
+
+.tilauksen-container h1{
+    color: #8d6a6a;
+}
+
+.tilaus-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.tilaus-footer p {
+    margin: 5px 0;
+}
+/* Responsiivisuus */
+@media (max-width: 1000px) {
+.tilaus-main {
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tilaukset-aliesittely {
+    padding-right: 0;
+    padding-bottom: 20px;
+    order: 1;
+}
+.tilauksen-container {
+    padding: 20px;
+     order: 2;
+     margin-right:0;
+  
+}
+}
+
+
+/* yhteystiedot.html */
+.yhteystiedot {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    margin: 50px auto;
+}
+
+ .yhteystiedot  h2 {
+   
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+ .yhteystiedot  p {
+  
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ .yhteystiedot  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ .yhteystiedot  ul li {
+    margin-bottom: 10px;
+    
+}
+
+
+
+ .yhteystiedot  form {
+    display: flex;
+    flex-direction: column;
+}
+
+ .yhteystiedot  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    
+}
+
+ .yhteystiedot  input[type="text"],
+ .yhteystiedot  input[type="email"],
+ .yhteystiedot  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+ .yhteystiedot  input[type="text"]:focus,
+ .yhteystiedot  input[type="email"]:focus,
+ .yhteystiedot  textarea:focus {
+    border-color: #FF69B4;/* Change border color on focus */
+    outline: none;
+}
+
+
+ .yhteystiedot  button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #FF69B4;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    border-color:#FF69B4;
+}
+
+ .yhteystiedot  button :hover {
+    background: linear-gradient(135deg, #fdb1d7, #FF69B4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width:767px) {
+    .yhteystiedot {
+        padding: 15px;
+        margin: 50px 20px;
+        }
+        
+   
+
+     .yhteystiedot  h2 {
+        font-size: 24px;
+    }
+
+
+}
+
+
+
+/* reseptit.html */
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+       
+        'nav main main main main aside'
+        'nav main main main main aside'
+      
+        ;
+    grid-gap: 1em;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.grid-container nav {
+    grid-area: nav;
+    background: #FF69B4;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.grid-container nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+
+}
+
+.grid-container nav ul li {
+
+padding-bottom: 20px;
+}
+.grid-container nav ul a  {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+  
+
+}
+
+.grid-container .content .hidden {
+    display: none;
+}
+
+.grid-container  .hero{
+    background-color: transparent;
+    display: flex
+;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+
+}
+
+.grid-container  .hero img {
+    width: 60%;
+}
+
+.grid-container .hero div img {
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.hero {
+
+}
+
+
+
+
+.grid-container .hero div a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 15px;
+}
+
+
+.grid-container .hero div img {
+ 
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+
+.grid-container .hero div h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+
+.hero div p {
+    font-size: 16px;
+    color: #555;
+    padding: 0 10px 10px;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 767px) {
+    .grid-container nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .grid-container {
+        grid-template-areas:
+       
+        'nav nav nav nav nav nav'
+        'main main main main main main'
+       
+    }
+    .grid-container nav ul{
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+       
+
+.recipe-intro img {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+
+.recipe-details, .recipe-steps {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #6b3e26;
+}
+
+
+.recipe-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-details li {
+    background: #ffeecc;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Étapes */
+.recipe-steps ol {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-steps li {
+    background: #d6c1b1;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Galerie */
+.recipe-gallery {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    max-width: 400px;
+    border-radius: 10px;
+    height: 30%;
+   
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .recipe-details, .recipe-steps {
+        width: 90%;
+    }
+} 

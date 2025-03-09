@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Pastries - Etusivu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Importation d'une police élégante */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+    </style>
+  
+</head>
+<body>
+     <header class= "index-header">
+        <h1>Fresh Pastries</h1>
+        <nav class ="index-nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="leivokset.html">Leivokset</a></li>
+                <li><a href="tilaus.html">Tilaus</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    
+    <main class = "tilaus-main">
+
+
+
+<div class="tilauksen-container">
+    <h1>Tilaa herkulliset leivonnaiset nopeasti ja helposti!</h1>
+    <p>Täytä alla oleva lomake ja tilaa suosikkileivonnaisesi kätevästi. Valmistamme kaikki tuotteemme rakkaudella ja huolella, jotta saat aina tuoreita ja maistuvia herkkuja.</p>
+
+    <form action="submit_order.php" method="POST">
+        <div class="form-group">
+            <label for="product">1. Valitse tuote:</label><br>
+            <div class="checkbox-group">
+                <input type="checkbox" id="suklaakakku" name="product[]" value="Suklaakakku - 25 € (6–8 hlö)">
+                <label for="suklaakakku">Suklaakakku</label><br>
+                
+                <input type="checkbox" id="brownies" name="product[]" value="Mehevät brownies - 15 € / 6 kpl (3–6 hlö)">
+                <label for="brownies">Mehevät brownies</label><br>
+                
+                <input type="checkbox" id="suklaafondant" name="product[]" value="Suklaafondant - 18 € / 4 kpl (4 hlö)">
+                <label for="suklaafondant">Suklaafondant</label><br>
+                
+                <input type="checkbox" id="suklaakeksit" name="product[]" value="Suklaakeksit - 12 € / 10 kpl (5–10 hlö)">
+                <label for="suklaakeksit">Suklaakeksit </label><br>
+                
+                <input type="checkbox" id="mustikkamuffinit" name="product[]" value="Mustikkamuffinit - 14 € / 6 kpl (3–6 hlö)">
+                <label for="mustikkamuffinit">Mustikkamuffinit </label><br>
+                
+                <input type="checkbox" id="vadelmajuustokakku" name="product[]" value="Vadelmajuustokakku - 28 € (8–10 hlö)">
+                <label for="vadelmajuustokakku">Vadelmajuustokakku</label><br>
+                
+                <input type="checkbox" id="mansikkatartaletit" name="product[]" value="Mansikkatartaletit - 16 € / 4 kpl (4 hlö)">
+                <label for="mansikkatartaletit">Mansikkatartaletit </label><br>
+                
+                <input type="checkbox" id="mansikkatäytekakku" name="product[]" value="Mansikkainen täytekakku - 30 € (8–10 hlö)">
+                <label for="mansikkatäytekakku">Mansikkainen täytekakku </label><br>
+                
+                <input type="checkbox" id="pavlova" name="product[]" value="Pavlova - 26 € (6–8 hlö)">
+                <label for="pavlova">Pavlova</label><br>
+                
+                <input type="checkbox" id="prinsessakakku" name="product[]" value="Prinsessakakku - 35 € (10–12 hlö)">
+                <label for="prinsessakakku">Prinsessakakku</label><br>
+                
+                <input type="checkbox" id="muu" name="product[]" value="Muu">
+                <label for="muu">Muu, mikä? _______</label><br>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">2. Määrä:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery_date">3. Toimituspäivä ja -aika:</label><br>
+            <input type="date" id="delivery_date" name="delivery_date" required><br>
+            <input type="time" id="delivery_time" name="delivery_time" required>
+        </div>
+
+        <div class="form-group">
+            <label for="special_requests">4. Erityistoiveet (esim. allergiat, koristelu):</label>
+            <textarea id="special_requests" name="special_requests" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="name">5. Yhteystiedot:</label><br>
+            <input type="text" id="name" name="name" placeholder="Nimi" required><br>
+            <input type="email" id="email" name="email" placeholder="Sähköposti" required><br>
+            <input type="tel" id="phone" name="phone" placeholder="Puhelinnumero" required>
+        </div>
+
+        <div class="form-group">
+            <label for="delivery_method">6. Toimitustapa:</label><br>
+            <input type="radio" id="pickup" name="delivery_method" value="Nouto liikkeestä (ilmainen)" checked>
+            <label for="pickup">Nouto liikkeestä (ilmainen)</label><br>
+            <input type="radio" id="delivery" name="delivery_method" value="Kotiinkuljetus (+5 €)">
+            <label for="delivery">Kotiinkuljetus (+5 €)</label>
+        </div>
+
+        <div class="form-group">
+            <label for="payment_method">7. Maksutapa:</label><br>
+            <input type="radio" id="cash" name="payment_method" value="Käteinen noudettaessa" checked>
+            <label for="cash">Käteinen noudettaessa</label><br>
+            <input type="radio" id="card" name="payment_method" value="Korttimaksu noudettaessa">
+            <label for="card">Korttimaksu noudettaessa</label><br>
+            <input type="radio" id="invoice" name="payment_method" value="Lasku sähköpostiin">
+            <label for="invoice">Lasku sähköpostiin</label>
+        </div>
+
+        <button type="submit" class="order-button">Tee tilaus</button>
+       
+    </form>
+
+    <div class="tilaus-footer">
+        <p>✅ Tilaukset tulee tehdä vähintään 48 tuntia etukäteen.</p>
+        <p>✅ Peruutukset viimeistään 24 tuntia ennen toimitusta.</p>
+        <p>✅ Mahdolliset kysymykset voi lähettää sähköpostitse: info@leivontapuoti.fi</p>
+    </div>
+</div>
+
+<div class="tilaukset-aliesittely">
+    <table class="hinnasto-table">
+        <thead>
+            <tr>
+                <th>Tuote</th>
+                <th>Hinta</th>
+                <th>Annoskoko</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Suklaakakku</td>
+                <td>25 €</td>
+                <td>6–8 hlö</td>
+            </tr>
+            <tr>
+                <td>Mehevät brownies (6 kpl)</td>
+                <td>15 €</td>
+                <td>3–6 hlö</td>
+            </tr>
+            <tr>
+                <td>Suklaafondant (4 kpl)</td>
+                <td>18 €</td>
+                <td>4 hlö</td>
+            </tr>
+            <tr>
+                <td>Suklaakeksit (10 kpl)</td>
+                <td>12 €</td>
+                <td>5–10 hlö</td>
+            </tr>
+            <tr>
+                <td>Mustikkamuffinit (6 kpl)</td>
+                <td>14 €</td>
+                <td>3–6 hlö</td>
+            </tr>
+            <tr>
+                <td>Vadelmajuustokakku</td>
+                <td>28 €</td>
+                <td>8–10 hlö</td>
+            </tr>
+            <tr>
+                <td>Mansikkatartaletit (4 kpl)</td>
+                <td>16 €</td>
+                <td>4 hlö</td>
+            </tr>
+            <tr>
+                <td>Mansikkainen täytekakku</td>
+                <td>30 €</td>
+                <td>8–10 hlö</td>
+            </tr>
+            <tr>
+                <td>Pavlova</td>
+                <td>26 €</td>
+                <td>6–8 hlö</td>
+            </tr>
+            <tr>
+                <td>Prinsessakakku</td>
+                <td>35 €</td>
+                <td>10–12 hlö</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    </main>
+
+   <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><a href="index.html">Fresh Pastries</a></h3>
+                <p>Découvrez une sélection exquise de pâtisseries, parfaites pour toutes les occasions.</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="yhteistiedot.html">Ota yhteyttä</a></h3>
+                <p>Fresh Pastriesa - Helsinginkatu 15 A 00100 Helsinki<br>contact@freshpastries.fi<br>+3584452157</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="palvelut.html">Nos Services</a></h3>
+                <p class="services">Livraison<br>Commandes sur mesure<br>Événements</p>
+            </div>
+            <div style="width:100%">
+                <p class="copyright">&copy; 2025 Fresh Pastries | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+ function toggleMenu() {
+    const nav = document.querySelector('.index-nav');
+    const burger = nav.querySelector('.burger');
+    nav.classList.toggle('active');
+    burger.classList.toggle('open');
+
+}
+    </script>
+</body>
+</html>

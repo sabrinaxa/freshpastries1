@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Pastries - Etusivu</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Importation d'une police élégante */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+   
+    </style>
+</head>
+<body>
+    <header class= "index-header">
+        <h1>Fresh Pastries</h1>
+        <nav class ="index-nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="leivokset.html">Leivokset</a></li>
+                <li><a href="tilaus.html">Tilaus</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+  <h2>Suosituimmat reseptit</h2>
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leivokset</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="grid-container"> 
+        <!-- Navigation à gauche -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showContent('suklaaleivos')">Suklaaleivos</a></li>
+                <li><a href="#" onclick="showContent('marjaleivos')">Marjaleivos</a></li>
+                <li><a href="#" onclick="showContent('kermaleivos')">Kermaleivos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Section de contenu à droite -->
+        <section class="content">
+            <section id="suklaaleivos" class="hero" >
+               
+               <div><a href="resept-brownies.html">
+                     <img src="Brownies.jpg" alt="Suklaaleivos">
+                    <h2>Mehevät Browniet</h2>
+                    <p>Täyteläisiä suklaaleivoksia herkutteluun</p>
+                    </a>
+                </div>
+                <div><a href="recept-Suklaafondant.html">
+                <img src="Chocolate-Fondant-Recipe.jpg" alt="Suklaaleivos">
+                <h2>Suklaafondant</h2>
+                <p>Suklaafondant herkutteluun</p>
+            </a>
+            </div>
+       <div><a href="Suklaakeksit.html">
+                <img src="suklaakeksit.jpg" alt="Suklaaleivos">
+                <h2>Suklaakeksit</h2>
+                <p>Rapeat ja herkulliset suklaahippukeksi</p>
+            </a>
+            </div>
+            </section>
+
+            <section id="marjaleivos" class="hero hidden">
+                 <div><a href="Mustikkamuffinit.html">
+                 <img src="marjaleivos.jpg" alt="Marjaleivos">
+                    <h2>Mustikkamuffinit</h2>
+                <p>Raikkaita Mustikkamuffeneja kesän makuun.</p>
+                    </a>
+                </div>
+
+                  <div><a href="Vadelmajuustokakku.html">
+                 <img src="raspberry-cheesecake1.jpg" alt="Marjaleivos">
+                    <h2>Vadelmajuustokakku (uunissa paistettava)</h2>
+                <p>Raikkaita Mustikkamuffeneja kesän makuun.</p>
+                    </a>
+                </div>
+
+                     <div><a href="mansikka-tartelit.html">
+                 <img src="Strawberry-Tart-Feature.jpg" alt="Marjaleivos">
+                    <h2> Mansikka basilika tartaletit (uunissa paistettava)</h2>
+                <p>Raikkaita nansikka basilika tartaletteja kesän makuun.</p>
+                    </a>
+                </div>
+
+            </section>
+
+            <section id="kermaleivos" class="hero hidden">
+                      <div><a href="Mansikkainen Täytekakku.html">
+                 <img src="perinteinen-mansikkakakku-1.jpg" alt="Marjaleivos">
+                    <h2>Mansikkainen Täytekakku</h2>
+                <p>Raikkaita Mansikkainen Täytekakun kesän makuun.</p>
+                    </a>
+                </div>
+
+                 <div><a href="Pavlova.html">
+                 <img src="pavlova-3.jpg" alt="Marjaleivos">
+                    <h2>Pavlova</h2>
+                <p>Herkullinen  Pavlova kesän makuun.</p>
+                    </a>
+                </div>
+
+                <div><a href="Prinsessakakku.html">
+                 <img src="prinsessakakku-vaihe-8.jpg" alt="Marjaleivos">
+                    <h2>Prinsessakakku</h2>
+                <p>Herkullinen  Prinsessakakun kesän makuun.</p>
+                    </a>
+                </div>
+
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+  
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><a href="index.html">Fresh Pastries</a></h3>
+                <p>Découvrez une sélection exquise de pâtisseries, parfaites pour toutes les occasions.</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="yhteistiedot.html">Ota yhteyttä</a></h3>
+                <p>Fresh Pastriesa - Helsinginkatu 15 A 00100 Helsinki<br>contact@freshpastries.fi<br>+3584452157</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="palvelut.html">Nos Services</a></h3>
+                <p class="services">Livraison<br>Commandes sur mesure<br>Événements</p>
+            </div>
+            <div style="width:100%">
+                <p class="copyright">&copy; 2025 Fresh Pastries | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+ function toggleMenu() {
+    const nav = document.querySelector('.index-nav');
+    const burger = nav.querySelector('.burger');
+    nav.classList.toggle('active');
+    burger.classList.toggle('open');
+
+}
+    </script>
+
+ <script>
+    function showContent(id) {
+    // Cache toutes les sections
+    document.querySelectorAll('.hero').forEach(section => {
+        section.classList.add('hidden');
+    });
+
+    // Affiche la section sélectionnée
+    document.getElementById(id).classList.remove('hidden');
+}
+ </script>
+</body>
+</html>

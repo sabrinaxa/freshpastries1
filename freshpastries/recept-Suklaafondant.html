@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resepti: Suklaafondant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Importation d'une police élégante */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+
+
+
+    </style>
+</head>
+<body>
+    <header class= "index-header">
+        <h1>Fresh Pastries</h1>
+        <nav class ="index-nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="leivokset.html">Leivokset</a></li>
+                <li><a href="tilaus.html">Tilaus</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+
+
+          <h1>Suklaafondant</h1>
+        <p>Täyteläinen ja suussa sulava suklaaherkku 🍫</p>
+ 
+   <main>
+        <section class="recipe-intro">
+            <img src="Chocolate-Fondant-Recipe.jpg" alt="Suklaafondant">
+            <p>Suklaafondant on täydellinen jälkiruoka, kun haluat hemmotella itseäsi ja vieraitasi. Tämä resepti takaa täydellisen pehmeän sisuksen!</p>
+        </section>
+
+        <section class="recipe-details">
+            <h2>Ainekset</h2>
+            <ul>
+                <li>100 g tummaa suklaata</li>
+                <li>100 g voita</li>
+                <li>2 munaa</li>
+                <li>2 rkl vehnäjauhoja</li>
+                <li>½ dl sokeria</li>
+            </ul>
+        </section>
+
+        <section class="recipe-steps">
+            <h2>Valmistusohjeet</h2>
+            <ol>
+                <p>1- Sulata suklaa ja voi miedolla lämmöllä.</p>
+                <p>2- Vatkaa munat ja sokeri kevyesti yhteen.</p>
+                <p>3- psää sulatettu suklaa-massaan ja sekoita jauhot joukkoon.</p>
+                <p>4- Voitele pienet uunivuoat ja jaa taikina niihin.</p>
+                <p>5- Paista 200°C noin 8–10 minuuttia – fondantin keskusta saa jäädä hieman valuvaksi.</p>
+            </ol>
+        </section>
+
+        <section class="recipe-gallery">
+            <h2>Vaiheittaiset kuvat</h2>
+            <div class="gallery">
+                <img src="Chocolate-Fondant-Recipe.jpg" alt="Sulanut suklaa ja voi">
+                <img src="Chocolate-Fondant-Recipe-PROCESS-3.jpg" alt="Paistettu suklaafondant">
+                <img src="Chocolate-Fondant-Recipe-PROCESS-4.jpg" alt="Taikinan sekoittaminen">
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+       <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><a href="index.html">Fresh Pastries</a></h3>
+                <p>Découvrez une sélection exquise de pâtisseries, parfaites pour toutes les occasions.</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="yhteistiedot.html">Ota yhteyttä</a></h3>
+                <p>Fresh Pastriesa - Helsinginkatu 15 A 00100 Helsinki<br>contact@freshpastries.fi<br>+3584452157</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="palvelut.html">Nos Services</a></h3>
+                <p class="services">Livraison<br>Commandes sur mesure<br>Événements</p>
+            </div>
+            <div style="width:100%">
+                <p class="copyright">&copy; 2025 Fresh Pastries | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+ function toggleMenu() {
+    const nav = document.querySelector('.index-nav');
+    const burger = nav.querySelector('.burger');
+    nav.classList.toggle('active');
+    burger.classList.toggle('open');
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resepti: Suklaafondant</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Importation d'une police élégante */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap');
+
+
+
+    </style>
+</head>
+<body>
+    <header class= "index-header">
+        <h1>Fresh Pastries</h1>
+        <nav class ="index-nav">
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="reseptit.html">Reseptit</a></li>
+                <li><a href="leivokset.html">Leivokset</a></li>
+                <li><a href="tilaus.html">Tilaus</a></li>
+                <li><a href="yhteystiedot.html">Yhteystiedot</a></li>
+            </ul>
+        </nav>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+
+      <h1>Pavlova</h1>
+        <p>Herkullinen ja raikas pavlova tuoreilla marjoilla 🍓</p>
+ 
+   <main>
+        <section class="recipe-intro">
+        <img src="pavlova-3.jpg" alt="Pavlova">
+            <p>Kauniin ja herkullisen pavlovan pehmeä marenki ja kermatäyte tekevät siitä täydellisen jälkiruoan juhliin tai arkeen.</p>
+        
+        </section>
+
+        <section class="recipe-details">
+            <h2>Ainekset</h2>
+              <h3>Marenki:</h3>
+            <ul>
+               <li>4 munanvalkuaista</li>
+                <li>2 dl sokeria</li>
+                <li>1 tl maissitärkkelystä</li>
+                <li>1 tl valkoviinietikkaa</li>
+            </ul>
+             <h3>Täyte:</h3>
+            <ul>
+                <li>2 dl vispikermaa</li>
+                <li>200 g maitorahkaa</li>
+                <li>2 rkl sokeria</li>
+                <li>Tuoreita marjoja koristeluun</li>
+            </ul>
+        </section>
+
+        <section class="recipe-steps">
+            <h2>Valmistusohjeet</h2>
+            <ol>
+            <p><strong>1.</strong> Vatkaa valkuaiset kovaksi vaahdoksi. Lisää sokeri vähitellen, jatka vatkaamista.</p>
+            <p><strong>2.</strong> Lisää lopuksi maissitärkkelys ja etikka.</p>
+            <p><strong>3.</strong> Levitä marenkivaahto uunipellille keoksi. Paista 125°C noin 1,5 tuntia.</p>
+            <p><strong>4.</strong> Vatkaa täytteen kerma, rahka ja sokeri. Lusikoi marengin päälle ja koristele marjoilla.</p>
+       
+            </ol>
+        </section>
+
+        <section class="recipe-gallery">
+            <h2>Vaiheittaiset kuvat</h2>
+            <div class="gallery">
+             <img src="how-to-make-pavlova-8.jpg" alt="Paistettu suklaafondant">
+             <img src="pavlova-3.jpg" alt="Pavlova">
+           
+             
+                
+            </div>
+        </section>
+
+    </main>
+
+
+
+
+
+       <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><a href="index.html">Fresh Pastries</a></h3>
+                <p>Découvrez une sélection exquise de pâtisseries, parfaites pour toutes les occasions.</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="yhteistiedot.html">Ota yhteyttä</a></h3>
+                <p>Fresh Pastriesa - Helsinginkatu 15 A 00100 Helsinki<br>contact@freshpastries.fi<br>+3584452157</p>
+            </div>
+            <div class="footer-column">
+                <h3><a href="palvelut.html">Nos Services</a></h3>
+                <p class="services">Livraison<br>Commandes sur mesure<br>Événements</p>
+            </div>
+            <div style="width:100%">
+                <p class="copyright">&copy; 2025 Fresh Pastries | Kaikki oikeudet pidätetään</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+ function toggleMenu() {
+    const nav = document.querySelector('.index-nav');
+    const burger = nav.querySelector('.burger');
+    nav.classList.toggle('active');
+    burger.classList.toggle('open');
+
+}
+    </script>
+</body>
+</html>
